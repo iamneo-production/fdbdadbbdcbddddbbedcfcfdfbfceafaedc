@@ -45,7 +45,7 @@ public class SpringApplicationTests {
 	 			.contentType(MediaType.APPLICATION_JSON)
 	 			.accept(MediaType.APPLICATION_JSON))
 	        	.andExpect(status().isOk())
-		        .andExpect(MockMvcResultMatchers.jsonPath("$[*].houseNo").exists())
+		        .andExpect(MockMvcResultMatchers.jsonPath("$[*].taskID").exists())
 		        .andExpect(MockMvcResultMatchers.jsonPath("$").isNotEmpty())
 	        	.andReturn();
 	 	
