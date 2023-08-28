@@ -14,7 +14,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
-@SpringBootTest
+@SpringBootTest(classes = SpringappApplication.class)
 @AutoConfigureMockMvc
 @RunWith(SpringRunner.class)
 public class SpringApplicationTests {
@@ -70,7 +70,7 @@ public class SpringApplicationTests {
 	
 	//Delete A Task
 	@Test
-	public void test_case5() throws Exception {
+	public void test_case4() throws Exception {
 		
 		mockMvc.perform(MockMvcRequestBuilders.get("/deleteTask")
 				.param("taskId","12211")
